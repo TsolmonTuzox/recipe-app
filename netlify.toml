@@ -1,6 +1,7 @@
 [build]
-command = "npm run generate --prefix recipe-manager"
-publish = "recipe-manager/dist"
+base = "recipe-manager"
+command = "npm run generate"
+publish = ".output/public"
 
 [[redirects]]
 from = "/*"
