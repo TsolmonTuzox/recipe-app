@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       firebaseAppId: process.env.FIREBASE_APP_ID,
       firebaseMeasurementId: process.env.FIREBASE_MEASUREMENT_ID
     }
-  }
-})
+  },
 
+  compatibilityDate: "2025-04-04"
+})
