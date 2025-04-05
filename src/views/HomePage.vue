@@ -29,7 +29,7 @@ import SearchFilters from '@/components/SearchFilters.vue';
 import recipeService from '@/services/recipeService';
 
 export default {
-  name: 'Home',
+  name: 'HomePage',
   components: {
     RecipeCard,
     RecipeDetail,

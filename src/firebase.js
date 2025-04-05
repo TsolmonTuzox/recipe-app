@@ -5,13 +5,13 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB6aXsHh7lGuvOS6MEX8ZyMKimvhV1prG0",
-  authDomain: "nashatechrecipe.firebaseapp.com",
-  projectId: "nashatechrecipe",
-  storageBucket: "nashatechrecipe.firebasestorage.app",
-  messagingSenderId: "24843706792",
-  appId: "1:24843706792:web:4943c1bd6225d7a953bd9d",
-  measurementId: "G-BN9NRBBEJ0"
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID,
+  measurementId: process.env.VUE_APP_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
@@ -20,6 +20,11 @@ const auth = getAuth(app);
 const firestore = getFirestore(app);
 const analytics = getAnalytics(app);
 const fbProvider = new FacebookAuthProvider();
+// Configure Facebook auth scopes
+fbProvider.addScope('email');
+fbProvider.setCustomParameters({
+  'display': 'popup'
+});
 
 export { auth, firestore, fbProvider, analytics };
 export default app;

@@ -15,7 +15,7 @@ import { auth, fbProvider } from '../firebase';
 import { signInWithPopup } from 'firebase/auth';
 
 export default {
-  name: 'Login',
+  name: 'LoginPage',
   methods: {
     async signInWithFacebook() {
       try {
