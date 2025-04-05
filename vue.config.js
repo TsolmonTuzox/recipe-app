@@ -1,13 +1,13 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require('@vue/cli-service');
 
 module.exports = defineConfig({
-  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
+  publicPath: '/',
   transpileDependencies: [],
-  configureWebpack: {
-    devServer: {
-      headers: { 'Access-Control-Allow-Origin': '*' }
-    }
+
+  devServer: {
+    headers: { 'Access-Control-Allow-Origin': '*' }
   },
+
   css: {
     loaderOptions: {
       scss: {
@@ -18,4 +18,4 @@ module.exports = defineConfig({
       }
     }
   }
-})
+});
