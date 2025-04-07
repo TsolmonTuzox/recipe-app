@@ -1,15 +1,24 @@
 {
   "name": "recipe-app",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "My fantastic Nuxt.js project",
+  "author": "mootsoo",
   "private": true,
   "scripts": {
-    "dev": "nuxt dev",
+    "dev": "nuxt",
     "build": "nuxt build",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "lint": "eslint ."
+    "start": "nuxt start",
+    "generate": "nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^3.16.2"
+    "@nuxtjs/axios": "^5.13.6",
+    "firebase": "^11.6.0",
+    "firebase-admin": "^13.2.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "sass": "^1.86.3",
+    "sass-loader": "^10.5.2"
   }
 }

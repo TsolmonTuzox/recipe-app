@@ -1,6 +1,6 @@
 [build]
 base = "recipe-manager"
-command = "npm run generate"
+command = "npm run build"
 publish = ".output/public"
 
 [[redirects]]
